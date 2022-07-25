@@ -1,0 +1,30 @@
+.logoLine {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 112px;
+    // width: 1920px;
+    width: 100%; // TODO: need check this
+    box-shadow: 0px 10px 30px 4px #55698708;
+    border-bottom: 1px solid;
+
+    .logoLineWrap {
+        display: flex;
+        justify-content: space-between;
+        min-width: 312px;
+
+        .WrapSettingsContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 146px;
+        }
+        
+        .WrapАccountContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 136px;
+        }
+    }
+}
