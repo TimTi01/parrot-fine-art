@@ -1,0 +1,56 @@
+.main {
+    margin-top: 100px;
+
+    .headerSection {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .headerSectionHeaderWrap {
+            display: flex;
+            justify-content: space-between;
+
+            .headerWrapTitle {
+                font-family: Roboto;
+                font-size: 50px;
+                font-weight: 400;
+                line-height: 60px;
+                letter-spacing: -0.02em;
+            }
+
+            .headerWrapCount {
+                font-family: Roboto;
+                font-size: 50px;
+                font-weight: 400;
+                line-height: 60px;
+                letter-spacing: -0.02em;
+            }
+        }
+
+        .headerSectionSearchWrap {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 22px;
+            
+            .searchWrapContainer {
+                display: flex;
+                align-items: center;
+
+                .SearchWrapTagsСontainer {
+                    margin-left: 22px;
+                }
+            }
+
+            .SearchWrapClear {
+                font-family: 'Roboto';
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                border: 0;
+                background: none;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+}
