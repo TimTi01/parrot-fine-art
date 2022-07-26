@@ -5,7 +5,7 @@ export const Avatar:FC = () => {
   return (
     <div className='avatar'>
         {/* src don't work :/ */}
-        {/* <img src="./photos/testLogoAvatar.jpg" alt='avatar' height='38' width='38'/> */}
+        <img src={require('../photos/testLogoAvatar1.jpg')} alt='avatar'/>
     </div>
   )
 }

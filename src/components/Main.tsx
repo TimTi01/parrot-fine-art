@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
 import '../styles/main.scss'
+import { Card } from './Card'
 import { FilterTag } from './FilterTag'
+import { Pagination } from './Pagination'
 import { Search } from './Search'
 // import '../styles/container.scss'
 
@@ -35,6 +37,19 @@ export const Main:FC = () => {
                         Clear filters
                     </button>
                 </div>
+            </section>
+            <section className='contentSection'>
+                <div className='contentSectionFilterWrap'>
+                    <div className='testCatDelThis'>Category</div>
+                    <div className='testCatDelThis'>Name</div>
+                </div>
+                <div className='contentSectionCardWrap'>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                </div>
+                <Pagination/>
             </section>
         </div>
     </main>

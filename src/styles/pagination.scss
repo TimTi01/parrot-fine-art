@@ -1,0 +1,59 @@
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    .paginationSwitch {
+        display: flex;
+        justify-content: flex-end;
+
+        .SwitchPrevBttn,
+        .SwitchNextBttn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            border: 1px solid #DFDFDF;
+            cursor: pointer;
+        }
+    
+        .SwitchPageNumber {
+            display: flex;
+            list-style-type: none;
+    
+            .pageNumberItem {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                height: 60px;
+                border: 1px solid #DFDFDF;
+                font-family: 'Roboto';
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                cursor: pointer;
+    
+                &:active {
+                    color: #FFFFFF;
+                    background-color: #000000;
+                }
+            }
+        }
+    }
+
+    .paginationResults {
+        margin-left: 40px;
+
+        .ResultsConters {
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+            letter-spacing: 0em;
+            color: #959595;
+        }
+    }
+}
