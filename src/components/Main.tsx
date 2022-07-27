@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import '../styles/main.scss'
 import { Card } from './Card'
+import { Category } from './Category'
 import { FilterTag } from './FilterTag'
 import { Pagination } from './Pagination'
 import { Search } from './Search'
@@ -40,8 +41,8 @@ export const Main:FC = () => {
             </section>
             <section className='contentSection'>
                 <div className='contentSectionFilterWrap'>
-                    <div className='testCatDelThis'>Category</div>
-                    <div className='testCatDelThis'>Name</div>
+                    <Category/>
+                    {/* <div className='testCatDelThis'>Name</div> */}
                 </div>
                 <div className='contentSectionCardWrap'>
                     <Card/>

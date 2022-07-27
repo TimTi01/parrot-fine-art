@@ -1,0 +1,93 @@
+// .category {
+//     position: relative;
+//     margin-bottom: 20px;
+
+//     select {
+//         background: none;
+//         border: 0;
+//         cursor: pointer;
+//         appearance: none;
+//         font-family: Roboto;
+//         font-size: 18px;
+//         font-weight: 600;
+//         line-height: 27px;
+//         letter-spacing: 0em;
+
+//         &:focus {
+//             outline: none;
+//         }
+//     }
+
+//     &:after {
+//         content: "";
+//         display: block;
+//         height: 10px;
+//         width: 10px;
+//         border: 2px solid #000000;
+//         transform: rotate(45deg);
+//         position: absolute;
+//         border-width: 0 3px 3px 0;
+//         top: 25%;
+//         left: 88px;
+//         z-index: 1;
+//     }
+// }
+
+
+.select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 258px;
+
+    .dropdown {
+        position: relative;
+        width: 100%;
+
+        .dropdownButton {
+            position: relative;
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+            width: 100%;
+            font-family: 'Roboto';
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 27px;
+            letter-spacing: 0em;
+            text-align: left;
+    
+            border: 2px solid lightgray;
+    
+            &:after {
+                content: "";
+                position: absolute;
+                height: 10px;
+                width: 10px;
+                border: 2px solid #000000;
+                transform: rotate(45deg);
+                border-width: 0 3px 3px 0;
+                top: 25%;
+                right: 15px;
+                pointer-events: none;
+            }
+        }
+    
+        .dropdownList {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            margin: 0;
+            padding: 20px;
+            list-style-type: none;
+            width: 170px;
+            box-shadow: 0px 10px 30px 4px #55698708;
+            background: #FFFFFF;
+            z-index: 1;
+    
+            .listItem {
+    
+            }
+        }
+    }
+}
