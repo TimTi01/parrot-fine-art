@@ -6,31 +6,94 @@
 
     .footerWrap {
         display: flex;
+        justify-content: space-between;
         margin: 0 auto;
         max-width: 1410px;
         min-height: 100%;
-        border: 1px solid white;
 
-        .logoColumn {
+        .wrapFirstСontainer {
+            display: flex;
+            justify-content: space-between;
+            width: 620px;
+
+            .footerWrapLogoColumn {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                
+                .logoColumnTextWrap {
+                    display: grid;
+                    grid-gap: 15px 60px;
+                    color: #ffffff;
+    
+                    .textWrapItem {
+                        font-family: 'Roboto';
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 27px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        list-style-type: none;
+                    }
+                }
+            }
+    
+            .footerWrapMenuColumn {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 15px 60px;
+                list-style-type: none;
+                
+                .menuColumnWrapMenu {
+                    font-family: 'Roboto';
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 27px;
+                    letter-spacing: 0em;
+                    color: #ffffff;
+                }
+            }
+        }    
+
+        .wrapSecondСontainer {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            
-            .logoColumnTextWrap {
-                display: flex;
-                flex-direction: column;
-                max-height: 70px;
+
+            .secondСontainerСontacts {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 15px 60px;
+                list-style-type: none;
+
+                .contactsLink {
+                    font-family: 'Roboto';
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 27px;
+                    letter-spacing: 0em;
+                    color: #ffffff;
+                }
+
+                .contactsIconsWrap {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .wrapContainer {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 112px;
+                    }
+                }
             }
 
-            .logoColumnText {
+            .secondСontainerСopyright {
                 font-family: 'Roboto';
-                font-size: 18px;
+                font-size: 14px;
                 font-weight: 400;
-                line-height: 27px;
+                line-height: 21px;
                 letter-spacing: 0em;
                 color: #ffffff;
-
-                //Check and add margin-bottom: 16px
             }
         }
     }
