@@ -6,12 +6,12 @@ export interface CardProps {
     id?: number,
     key?: number,
     avatar: string,
-    author: string,
+    name: string,
     title: string,
     picture: string
 }
 
-export const Card:FC<CardProps> = ({avatar, author, title, picture}) => {
+export const Card:FC<CardProps> = ({avatar, name, title, picture}) => {
   return (
     <article className='card'>
         <div className='cardImg'>
@@ -21,7 +21,7 @@ export const Card:FC<CardProps> = ({avatar, author, title, picture}) => {
             <Avatar avatar={avatar}/>
             <div className='ContainerAutorInfoWrap'>
                 <div className='AutorInfoWrapName'>
-                    {author}
+                    {name}
                 </div>
                 <div className='AutorInfoWrapPictureName'>
                     {title}

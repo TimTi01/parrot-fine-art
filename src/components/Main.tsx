@@ -59,13 +59,12 @@ export const Main:FC = () => {
                     />
                 </div>
                 <div className='contentSectionCardWrap'>
-                    {/* Исправить багулину с category и т.п*/}
                     {data?.map((item) => (
                         <Card key={item.id}
                               picture={item.picture}
                               avatar={item.avatar}
                               title={item.title}
-                              author={item.author}
+                              name={item.name}
                         />
                     ))}
                 </div>
