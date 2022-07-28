@@ -1,11 +1,17 @@
 import React, { FC } from 'react'
 import '../styles/avatar.scss'
 
-export const Avatar:FC = () => {
+interface AvatarProps {
+  avatar?: string
+}
+
+// require('../photos/testLogoAvatar1.jpg')
+
+export const Avatar:FC<AvatarProps> = ({avatar}) => {
   return (
     <div className='avatar'>
         {/* src don't work :/ */}
-        <img src={require('../photos/testLogoAvatar1.jpg')} alt='avatar'/>
+        <img src={avatar} alt='avatar'/>
     </div>
   )
 }

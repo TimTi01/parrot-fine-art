@@ -1,11 +1,13 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import '../styles/main.scss'
 import { Card } from './Card'
 import { Category } from './Category'
 import { FilterTag } from './FilterTag'
+import { Name } from './Name'
 import { Pagination } from './Pagination'
 import { Search } from './Search'
-// import '../styles/container.scss'
+import pictures from '../data.json'
+import { useSearchPicturesQuery } from '../api'
 
 const fakeSearchData = [
     {id: 0, text: 'Mixed Media'},
@@ -13,6 +15,12 @@ const fakeSearchData = [
 ]
 
 export const Main:FC = () => {
+    const [searchName, setSearchName] = useState('')
+    const [searchCategory, setSearchCategory] = useState('Landscape')
+    const {data} = useSearchPicturesQuery({searchName, searchCategory})
+
+    console.log(data);
+    
   return (
     <main className='main'>
         <div className='container'>
@@ -41,14 +49,25 @@ export const Main:FC = () => {
             </section>
             <section className='contentSection'>
                 <div className='contentSectionFilterWrap'>
-                    <Category/>
-                    {/* <div className='testCatDelThis'>Name</div> */}
+                    <Category
+                        searchCategory={searchCategory}
+                        setSearchCategory={setSearchCategory}
+                    />
+                    <Name 
+                        searchName={searchName}
+                        setSearchName={setSearchName}    
+                    />
                 </div>
                 <div className='contentSectionCardWrap'>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
+                    {/* Исправить багулину с category и т.п*/}
+                    {data?.map((item) => (
+                        <Card key={item.id}
+                              picture={item.picture}
+                              avatar={item.avatar}
+                              title={item.title}
+                              author={item.author}
+                        />
+                    ))}
                 </div>
                 <Pagination/>
             </section>
