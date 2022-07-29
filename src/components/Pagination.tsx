@@ -1,9 +1,8 @@
 import React, { FC } from 'react'
-import { ArrowL } from './ArrowL'
-import { ArrowR } from './ArrowR'
 import '../styles/pagination.scss'
 import { useGetTotalCountQuery } from '../api'
 import { createPages } from '../utils/createPages'
+import { Arrow } from './Arrow'
 
 interface PaginationProps {
     page: number,
@@ -21,7 +20,9 @@ export const Pagination:FC<PaginationProps> = ({page, setPage}) => {
                         onClick={() => setPage(page - 1)}
                         disabled={page === 1}
                 >
-                    <ArrowL/>
+                    <Arrow position={'L'}
+                           color={'#000000'} 
+                    />
                 </button>
                 <ul className='SwitchPageNumber'>
                     {totalData?.total === undefined 
@@ -40,7 +41,9 @@ export const Pagination:FC<PaginationProps> = ({page, setPage}) => {
                         onClick={() => setPage(page + 1)}       
                         disabled={Math.ceil(totalData?.total / 4) === page}             
                 >
-                    <ArrowR/>
+                    <Arrow position={'R'}
+                           color={'#000000'} 
+                    />
                 </button>
             </div>
             <div className='paginationResults'>

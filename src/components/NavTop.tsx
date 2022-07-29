@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import '../styles/navTop.scss'
-import { ArrowL } from './ArrowL'
-import { ArrowR } from './ArrowR'
+import { Arrow } from './Arrow'
 
 interface MenuItem {
     id: number,
@@ -24,7 +23,7 @@ export const NavTop:FC = () => {
     return (
         <nav className='navTop'>
             <ul className='navTopMenu'>
-                <ArrowL/>
+                <Arrow position='L'/>
                 {mockData.map((item: MenuItem) => (
                     <li key={item.id} 
                         className='menuItem'
@@ -32,7 +31,7 @@ export const NavTop:FC = () => {
                         {item.title}
                     </li>
                 ))}
-                <ArrowR/>
+                <Arrow position='R'/>
             </ul>
         </nav>
     )
