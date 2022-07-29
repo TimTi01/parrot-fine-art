@@ -6,8 +6,7 @@ import { FilterTag } from './FilterTag'
 import { Name } from './Name'
 import { Pagination } from './Pagination'
 import { Search } from './Search'
-import pictures from '../data.json'
-import { useGetTotalCountQuery, useSearchPicturesQuery } from '../api'
+import { useSearchPicturesQuery } from '../api'
 
 const fakeSearchData = [
     {id: 0, text: 'Mixed Media'},
@@ -20,11 +19,6 @@ export const Main:FC = () => {
     const [page, setPage] = useState(1)
     const [limit, setLimit] = useState(4)
     const {data} = useSearchPicturesQuery({searchName, searchCategory, page, limit})
-    // const {data: totalData} = useGetTotalCountQuery('')
-
-    // const totalPage = totalData?.total / 4
-    // console.log(data);
-    // console.log('totalPage: ', totalPage);
 
 
     const clearFilters = () => {

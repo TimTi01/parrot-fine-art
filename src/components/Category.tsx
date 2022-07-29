@@ -2,7 +2,6 @@ import React, { FC, useState } from 'react'
 import '../styles/category.scss'
 
 const listItem = ['Sculpture', 'Architecture', 'Landscape', 'Graphic arts', 'Portrait']
-// const listItem = ['Sculpture', 'Architecture', 'Landscape', 'Graphic arts', 'Portrait']
 
 interface CategoryProps {
   searchCategory: string
@@ -11,8 +10,6 @@ interface CategoryProps {
 
 export const Category:FC<CategoryProps> = ({searchCategory, setSearchCategory}) => {
   const [active, setActive] = useState(false)
-  const [selectedRadioBttn, setSelectedRadioBttn] = useState("Sculpture")
-  // console.log(selectedRadioBttn);
   
 
   const isRadioSelected = (value: string): boolean => {
