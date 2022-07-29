@@ -2,29 +2,49 @@ import React, { FC } from 'react'
 import { ArrowL } from './ArrowL'
 import { ArrowR } from './ArrowR'
 import '../styles/pagination.scss'
+import { useGetTotalCountQuery } from '../api'
+import { createPages } from '../utils/createPages'
 
-export const Pagination:FC = () => {
+interface PaginationProps {
+    page: number,
+    setPage: React.Dispatch<React.SetStateAction<number>>
+}
 
-    //TODO: доделать логику и цвет активации кнопки номера выбранной страницы
+export const Pagination:FC<PaginationProps> = ({page, setPage}) => {
+    const {data: totalData} = useGetTotalCountQuery('')
+    console.log(totalData);
+
     return (
         <div className='pagination'>
             <div className='paginationSwitch'>
-                <button className='SwitchPrevBttn'>
+                <button className='SwitchPrevBttn'
+                        onClick={() => setPage(page - 1)}
+                        disabled={page === 1}
+                >
                     <ArrowL/>
                 </button>
                 <ul className='SwitchPageNumber'>
-                    <li className='pageNumberItem'>1</li>
-                    <li className='pageNumberItem'>2</li>
-                    <li className='pageNumberItem'>3</li>
-                    <li className='pageNumberItem'>...</li>
-                    <li className='pageNumberItem'>74</li>
+                    {totalData?.total === undefined 
+                        ? <li className='pageNumberItem'>...</li>
+                        : createPages(Math.ceil(totalData?.total / 4)).map((data: number, idx) => (
+                            <li key={idx} 
+                                className={page !== data ? 'pageNumberItem' : 'pageNumberItem pageNumberItem--active'}
+                                onClick={() => setPage(data)}
+                            >
+                                {data}
+                            </li>        
+                        ))
+                    }
                 </ul>
-                <button className='SwitchNextBttn'>
+                <button className='SwitchNextBttn'
+                        onClick={() => setPage(page + 1)}       
+                        disabled={Math.ceil(totalData?.total / 4) === page}             
+                >
                     <ArrowR/>
                 </button>
             </div>
             <div className='paginationResults'>
-                <span className='ResultsConters'>1-4 of 296 Results</span>
+                <span className='ResultsConters'>{`1-4 of ${totalData?.total} Results`}</span>
             </div>
         </div>
     )

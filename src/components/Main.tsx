@@ -7,7 +7,7 @@ import { Name } from './Name'
 import { Pagination } from './Pagination'
 import { Search } from './Search'
 import pictures from '../data.json'
-import { useSearchPicturesQuery } from '../api'
+import { useGetTotalCountQuery, useSearchPicturesQuery } from '../api'
 
 const fakeSearchData = [
     {id: 0, text: 'Mixed Media'},
@@ -16,10 +16,21 @@ const fakeSearchData = [
 
 export const Main:FC = () => {
     const [searchName, setSearchName] = useState('')
-    const [searchCategory, setSearchCategory] = useState('Landscape')
-    const {data} = useSearchPicturesQuery({searchName, searchCategory})
+    const [searchCategory, setSearchCategory] = useState('')
+    const [page, setPage] = useState(1)
+    const [limit, setLimit] = useState(4)
+    const {data} = useSearchPicturesQuery({searchName, searchCategory, page, limit})
+    // const {data: totalData} = useGetTotalCountQuery('')
 
-    console.log(data);
+    // const totalPage = totalData?.total / 4
+    // console.log(data);
+    // console.log('totalPage: ', totalPage);
+
+
+    const clearFilters = () => {
+        setSearchName('')
+        setSearchCategory('')
+    }
     
   return (
     <main className='main'>
@@ -41,7 +52,7 @@ export const Main:FC = () => {
                     </div>
                                 
                     <button className='SearchWrapClear'
-                            onClick={() => console.log('click')}
+                            onClick={clearFilters}
                     >
                         Clear filters
                     </button>
@@ -68,7 +79,7 @@ export const Main:FC = () => {
                         />
                     ))}
                 </div>
-                <Pagination/>
+                <Pagination page={page} setPage={setPage}/>
             </section>
         </div>
     </main>

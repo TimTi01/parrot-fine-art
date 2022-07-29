@@ -36,10 +36,10 @@
                 letter-spacing: 0em;
                 cursor: pointer;
     
-                &:active {
-                    color: #FFFFFF;
-                    background-color: #000000;
-                }
+            }
+            .pageNumberItem--active {
+                color: #fff;
+                background-color: #000000;
             }
         }
     }
