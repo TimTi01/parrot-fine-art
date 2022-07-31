@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
-import '../styles/header.scss'
-import '../styles/container.scss'
+import '../styles/components/header/header.module.scss'
 import { LogoLine } from './LogoLine'
 import { NavTop } from './NavTop'
 

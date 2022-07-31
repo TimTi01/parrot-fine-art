@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react'
-import '../styles/category.scss'
+import '../styles/components/category/category.module.scss'
 
 const listItem = ['Sculpture', 'Architecture', 'Landscape', 'Graphic arts', 'Portrait']
 
@@ -8,6 +8,7 @@ interface CategoryProps {
   setSearchCategory: React.Dispatch<React.SetStateAction<string>>
 }
 
+// Category selection component
 export const Category:FC<CategoryProps> = ({searchCategory, setSearchCategory}) => {
   const [active, setActive] = useState(false)
   
@@ -16,6 +17,7 @@ export const Category:FC<CategoryProps> = ({searchCategory, setSearchCategory}) 
     return searchCategory === value
   }
 
+  // Selecting a point and passing the value to the state
   const handleRadioClick = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setSearchCategory(e.currentTarget.value)
   }

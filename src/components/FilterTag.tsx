@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Cross } from './icons/Cross'
-import '../styles/filterTag.scss'
+import '../styles/components/filterTag/filterTag.module.scss'
 
 interface FilterTagProps {
     text: string

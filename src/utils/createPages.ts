@@ -1,3 +1,6 @@
+//The function turns a number into an array of numbers
+// Array length === totalPage
+
 export const createPages = (totalPage: number) => {
     console.log(totalPage);
     

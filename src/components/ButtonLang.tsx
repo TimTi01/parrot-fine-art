@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import '../styles/buttonLang.scss'
+import '../styles/components/buttonLang/buttonLang.module.scss'
 import { Arrow } from './Arrow'
 
 export const ButtonLang:FC = () => {

@@ -5,6 +5,7 @@ interface ArrowProps {
     color?: string,
 }
 
+// Reusable "Arrow" component
 export const Arrow:FC<ArrowProps> = ({position, color}) => {
     let c = color === undefined ? "#B8B8B8" : color
     let d = ''

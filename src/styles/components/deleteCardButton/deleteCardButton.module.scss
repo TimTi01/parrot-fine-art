@@ -1,0 +1,14 @@
+.deleteCardButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    background: #B8B8B899;
+    border: 0;
+    cursor: pointer;
+}

@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import '../styles/pagination.scss'
+import '../styles/components/pagination/pagination.module.scss'
 import { useGetTotalCountQuery } from '../api'
 import { createPages } from '../utils/createPages'
 import { Arrow } from './Arrow'

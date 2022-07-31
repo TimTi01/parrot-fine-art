@@ -1,0 +1,25 @@
+@import "../../common/variables.scss";
+@import "../../common/extends.scss";
+
+.navTop {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+    
+    .navTopMenu {
+        @extend %flex-between-center;
+        width: 100%;
+        padding-left: 0;
+
+        .menuItem {
+            @extend %font-settings-18;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (min-width: $bpMS) and (max-width: $bpTB) {
+        display: none;  
+    }
+}

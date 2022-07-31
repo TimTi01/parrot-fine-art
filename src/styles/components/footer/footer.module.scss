@@ -1,48 +1,52 @@
+@import "../../common/variables.scss";
+@import "../../common/extends.scss";
+
 .footer {
     min-height: 278px;
     background: #000000;
     margin-top: 150px;
     padding: 50px 0 75px 0;
 
-    @media screen and (min-width: 320px) and (max-width: 1024px) {
+    // 320px-1024px
+    @media screen and (min-width: $bpMS) and (max-width: $bpLap) {
         padding-bottom: 55px; 
     }
 
     .footerWrap {
-        display: flex;
-        justify-content: space-between;
+        @extend %flex-between;
         margin: 0 auto;
         padding: 0 30px;
         max-width: 1410px;
         min-height: 100%;
 
-        @media screen and (min-width: 320px) and (max-width: 1024px) {
+        // 320xp-1024px
+        @media screen and (min-width: $bpMS) and (max-width: $bpLap) {
             flex-direction: column;
             align-items: center;
             gap: 30px;  
         }
 
         .wrapFirstСontainer {
-            display: flex;
-            justify-content: space-between;
+            @extend %flex-between;
             width: 620px;
 
-            @media screen and (min-width: 320px) and (max-width: 425px) {
+            // 320px-425px
+            @media screen and (min-width: $bpMS) and (max-width: $bpML) {
                 flex-direction: column;
                 align-items: center;
                 gap: 20px;
             }
-
-            @media screen and (min-width: 320px) and (max-width: 768px) {
+            // 320px-768px
+            @media screen and (min-width: $bpMS) and (max-width: $bpTB) {
                 justify-content: space-evenly;
             }
 
             .footerWrapLogoColumn {
-                display: flex;
+                @extend %flex-between;
                 flex-direction: column;
-                justify-content: space-between;
 
-                @media screen and (min-width: 320px) and (max-width: 425px) {
+                // 320px-425px
+                @media screen and (min-width: $bpMS) and (max-width: $bpML) {
                     align-items: center;
                     gap: 40px;
                 }
@@ -53,21 +57,19 @@
                     color: #ffffff;
                     grid-template-columns: 1fr 1fr;
 
-                    @media screen and (min-width: 320px) and (max-width: 425px) {
+                    // 320px-425px
+                    @media screen and (min-width: $bpMS) and (max-width: $bpML) {
                         font-size: 14px;
                         grid-gap: 15px 30px;
                     }
     
                     .textWrapItem {
-                        font-family: 'Roboto';
-                        font-size: 18px;
-                        font-weight: 400;
-                        line-height: 27px;
-                        letter-spacing: 0em;
+                       @extend %font-settings-18-400;
                         text-align: left;
                         list-style-type: none;
 
-                        @media screen and (min-width: 320px) and (max-width: 425px) {
+                        // 320px-425px
+                        @media screen and (min-width: $bpMS) and (max-width: $bpML) {
                             font-size: 14px;
                         }
                     }
@@ -80,19 +82,17 @@
                 grid-gap: 15px 60px;
                 list-style-type: none;
 
-                @media screen and (min-width: 320px) and (max-width: 768px) {
+                // 320px-768px
+                @media screen and (min-width: $bpMS) and (max-width: $bpTB) {
                     grid-gap: 15px 30px;
                 }
                 
                 .menuColumnWrapMenu {
-                    font-family: 'Roboto';
-                    font-size: 18px;
-                    font-weight: 400;
-                    line-height: 27px;
-                    letter-spacing: 0em;
+                    @extend %font-settings-18-400;
                     color: #ffffff;
 
-                    @media screen and (min-width: 320px) and (max-width: 425px) {
+                    // 320px-425px
+                    @media screen and (min-width: $bpMS) and (max-width: $bpML) {
                         font-size: 14px;
                     }
                 }
@@ -100,11 +100,11 @@
         }    
 
         .wrapSecondСontainer {
-            display: flex;
+            @extend %flex-between;
             flex-direction: column;
-            justify-content: space-between;
 
-            @media screen and (min-width: 320px) and (max-width: 768px) {
+            // 320px-768px
+            @media screen and (min-width: $bpMS) and (max-width: $bpTB) {
                 gap: 40px;
                 align-items: center;
             }
@@ -115,19 +115,17 @@
                 grid-gap: 15px 60px;
                 list-style-type: none;
 
-                @media screen and (min-width: 320px) and (max-width: 768px) {
+                // 320px-768px
+                @media screen and (min-width: $bpMS) and (max-width: $bpTB) {
                     grid-gap: 15px 30px;
                 }
 
                 .contactsLink {
-                    font-family: 'Roboto';
-                    font-size: 18px;
-                    font-weight: 400;
-                    line-height: 27px;
-                    letter-spacing: 0em;
+                    @extend %font-settings-18-400;
                     color: #ffffff;
 
-                    @media screen and (min-width: 320px) and (max-width: 425px) {
+                    // 320px-425px
+                    @media screen and (min-width: $bpMS) and (max-width: $bpML) {
                         font-size: 14px;
                     }
                 }
@@ -137,8 +135,7 @@
                     justify-content: flex-end;
 
                     .wrapContainer {
-                        display: flex;
-                        justify-content: space-between;
+                        @extend %flex-between;
                         width: 112px;
                     }
                 }

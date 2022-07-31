@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import { Avatar } from './Avatar'
-import '../styles/card.scss'
+import '../styles/components/card/card.module.scss'
+import { DeleteCardButton } from './DeleteCardButton'
 
 export interface CardProps {
     id?: number,
@@ -11,6 +12,9 @@ export interface CardProps {
     picture: string
 }
 
+// The component containing the picture, 
+// the author of the picture 
+// and the name of the picture
 export const Card:FC<CardProps> = ({avatar, name, title, picture}) => {
   return (
     <article className='card'>
@@ -27,6 +31,7 @@ export const Card:FC<CardProps> = ({avatar, name, title, picture}) => {
                     {title}
                 </div>
             </div>
+            <DeleteCardButton/>
         </div>
     </article>
   )

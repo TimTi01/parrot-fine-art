@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import '../styles/navTop.scss'
+import '../styles/components/navTop/navTop.module.scss'
 import { Arrow } from './Arrow'
 
 interface MenuItem {

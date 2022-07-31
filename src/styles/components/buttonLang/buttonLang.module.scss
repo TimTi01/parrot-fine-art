@@ -1,0 +1,20 @@
+@import "../../common/variables.scss";
+@import "../../common/extends.scss";
+
+.buttonLang {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .button {
+        @extend %font-settings-18;
+        border: 0;
+        background: none;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    @media screen and (min-width: $bpMS) and (max-width: $bpTB) {
+        display: none;  
+    }
+}

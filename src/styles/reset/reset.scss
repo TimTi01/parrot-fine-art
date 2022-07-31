@@ -1,20 +1,19 @@
-/* @import "./styles/index.scss"; */
-
-/* *,
+*,
 *::after,
 *::before {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; 
-  overflow-x: hidden; 
-} */
+  padding: 0;
+  /* Hidden white space */
+  // overflow-x: hidden; 
+}
 
-/* html,body {
+html,body {
   width: 100%;
   overflow-x: hidden;
-} */
+}
 
-/* body {
+body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -26,4 +25,4 @@
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-} */
+}

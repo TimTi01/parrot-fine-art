@@ -1,9 +1,8 @@
 import React, { FC } from 'react'
-import '../styles/footer.scss'
+import '../styles/components/footer/footer.module.scss'
 import { FacebookIcon } from './icons/FacebookIcon'
 import { Instagram } from './icons/Instagram'
 import { WhatsApp } from './icons/WhatsApp'
-// import '../styles/container.scss'
 import { LogoWhite } from './LogoWhite'
 
 const text = ['Artworks', 'Landscape', 'Portrait', 'Still life', 'Painting', 'Sculpture', 'Architecture', 'Graphic arts']
