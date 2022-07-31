@@ -10,12 +10,21 @@
             display: flex;
             justify-content: space-between;
 
+            @media screen and (min-width: 320px) and (max-width: 768px) {
+                justify-content: center
+            }
+
             .headerWrapTitle {
                 font-family: Roboto;
                 font-size: 50px;
                 font-weight: 400;
                 line-height: 60px;
                 letter-spacing: -0.02em;
+
+                
+                @media screen and (min-width: 320px) and (max-width: 768px) {
+                    font-size: 40px;
+                }
             }
 
             .headerWrapCount {
@@ -24,6 +33,10 @@
                 font-weight: 400;
                 line-height: 60px;
                 letter-spacing: -0.02em;
+
+                @media screen and (min-width: 320px) and (max-width: 768px) {
+                    display: none;
+                }
             }
         }
 
@@ -31,6 +44,10 @@
             display: flex;
             justify-content: space-between;
             margin-top: 22px;
+
+            @media screen and (min-width: 320px) and (max-width: 768px) {
+                justify-content: space-around;
+            }
             
             .searchWrapContainer {
                 display: flex;
@@ -38,6 +55,10 @@
 
                 .SearchWrapTagsСontainer {
                     margin-left: 22px;
+
+                    @media screen and (min-width: 320px) and (max-width: 768px) {
+                        display: none;
+                    }
                 }
             }
 
@@ -63,6 +84,15 @@
         .contentSectionFilterWrap {
             display: flex;
 
+            @media screen and (min-width: 320px) and (max-width: 425px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            @media screen and (min-width: 425px) and (max-width: 768px) {
+                justify-content: space-around;
+            }
+
             .testCatDelThis {
                 width: 248px;
                 height: 27px;
@@ -79,8 +109,22 @@
         .contentSectionCardWrap {
             display: flex;
             justify-content: space-between;
-            margin-top: 60px;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 40px;
             margin-bottom: 100px;
+
+            @media screen and (min-width: 1024px) {
+                flex-wrap: nowrap;
+            }
+
+            @media screen and (min-width: 320px) and (max-width: 768px) {
+                justify-content: center;
+            }
         }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+        margin-top: 30px;
     }
 }

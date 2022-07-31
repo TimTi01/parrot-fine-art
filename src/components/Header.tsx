@@ -7,7 +7,7 @@ import { NavTop } from './NavTop'
 export const Header:FC = () => {
   return (
     <header className='header'>
-      <div className='container'>
+      <div className="headerContainer">
         <LogoLine/>
         <NavTop/>
       </div>

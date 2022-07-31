@@ -1,30 +1,62 @@
 .footer {
-    height: 278px;
+    min-height: 278px;
     background: #000000;
     margin-top: 150px;
     padding: 50px 0 75px 0;
+
+    @media screen and (min-width: 320px) and (max-width: 1024px) {
+        padding-bottom: 55px; 
+    }
 
     .footerWrap {
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
+        padding: 0 30px;
         max-width: 1410px;
         min-height: 100%;
+
+        @media screen and (min-width: 320px) and (max-width: 1024px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;  
+        }
 
         .wrapFirstСontainer {
             display: flex;
             justify-content: space-between;
             width: 620px;
 
+            @media screen and (min-width: 320px) and (max-width: 425px) {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            @media screen and (min-width: 320px) and (max-width: 768px) {
+                justify-content: space-evenly;
+            }
+
             .footerWrapLogoColumn {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+
+                @media screen and (min-width: 320px) and (max-width: 425px) {
+                    align-items: center;
+                    gap: 40px;
+                }
                 
                 .logoColumnTextWrap {
                     display: grid;
                     grid-gap: 15px 60px;
                     color: #ffffff;
+                    grid-template-columns: 1fr 1fr;
+
+                    @media screen and (min-width: 320px) and (max-width: 425px) {
+                        font-size: 14px;
+                        grid-gap: 15px 30px;
+                    }
     
                     .textWrapItem {
                         font-family: 'Roboto';
@@ -34,6 +66,10 @@
                         letter-spacing: 0em;
                         text-align: left;
                         list-style-type: none;
+
+                        @media screen and (min-width: 320px) and (max-width: 425px) {
+                            font-size: 14px;
+                        }
                     }
                 }
             }
@@ -43,6 +79,10 @@
                 grid-template-columns: 1fr 1fr;
                 grid-gap: 15px 60px;
                 list-style-type: none;
+
+                @media screen and (min-width: 320px) and (max-width: 768px) {
+                    grid-gap: 15px 30px;
+                }
                 
                 .menuColumnWrapMenu {
                     font-family: 'Roboto';
@@ -51,6 +91,10 @@
                     line-height: 27px;
                     letter-spacing: 0em;
                     color: #ffffff;
+
+                    @media screen and (min-width: 320px) and (max-width: 425px) {
+                        font-size: 14px;
+                    }
                 }
             }
         }    
@@ -60,11 +104,20 @@
             flex-direction: column;
             justify-content: space-between;
 
+            @media screen and (min-width: 320px) and (max-width: 768px) {
+                gap: 40px;
+                align-items: center;
+            }
+
             .secondСontainerСontacts {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-gap: 15px 60px;
                 list-style-type: none;
+
+                @media screen and (min-width: 320px) and (max-width: 768px) {
+                    grid-gap: 15px 30px;
+                }
 
                 .contactsLink {
                     font-family: 'Roboto';
@@ -73,6 +126,10 @@
                     line-height: 27px;
                     letter-spacing: 0em;
                     color: #ffffff;
+
+                    @media screen and (min-width: 320px) and (max-width: 425px) {
+                        font-size: 14px;
+                    }
                 }
 
                 .contactsIconsWrap {
